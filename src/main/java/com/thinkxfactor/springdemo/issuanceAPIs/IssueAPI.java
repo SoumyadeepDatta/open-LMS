@@ -65,5 +65,4 @@ public class IssueAPI {
         return ResponseEntity.ok("");
     }
 
-    // ---- return controller ---- TODO
 }
