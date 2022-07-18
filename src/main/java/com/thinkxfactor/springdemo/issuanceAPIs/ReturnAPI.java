@@ -31,44 +31,6 @@ public class ReturnAPI {
         return ResponseEntity.ok("");
     }
 
-    // // 1. return books
-    // @DeleteMapping("/returnBooks")
-    // public ResponseEntity<?> returnBooks(@RequestParam Long sid, @RequestBody List<Long> bidList) {
-
-    //     // check existence of student
-    //     if(!studentRepository.existsById(sid)) {
-    //         return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    //     }
-    //     else {
-    //         // check existence of books
-    //         Set<Long> bidSet = new HashSet<>(bidList);
-    //         for(Long bid : bidSet) {
-    //             if(!bookRepository.existsById(bid)) {
-    //                 return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-    //             }
-    //         }
-
-    //         // handle -ve qty (if any)
-    //         bookQtyMgr.handleNegQty();
-
-    //         // perform actions
-
-    //         for(Long bid : bidSet) {
-                
-    //             borrowRepository.deleteBySidAndBid(sid, bid);
-
-    //             // after returning the book increment its qty by 1
-    //             bookQtyMgr.bookQtyInc(bid);
-    //         }
-
-    //         return ResponseEntity.status(HttpStatus.ACCEPTED).build();
-    //     }
-    // }
-
-    // // 2. show books to return (redirect to similar method /borrow/borrowedBooks)
-    // @GetMapping("/booksToReturn")
-    // public ResponseEntity<?> booksToReturn(@RequestParam Long sid) {
-    //     return ResponseEntity.status(HttpStatus.FOUND).location(URI.create(uMgr.BASE_URL + "/borrow/borrowedBooks?sid=" + sid)).build();
-    // }
+    
 
 }

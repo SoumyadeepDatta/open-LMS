@@ -34,32 +34,7 @@ public class IssuanceServiceImpl implements IssuanceService {
         @Autowired
         private BookQtyMgr bookQtyMgr;
 
-        // @Override
-        // public void issueBooks(Long sid, Set<Long> bids) {
-
-        // if (studentRepo.existsById(sid) && // check if student exists
-        // bids.stream()
-        // .allMatch(id -> {
-        // return bookRepo.existsById(id)
-        // && bookQtyMgr.getBookQty(id) != null
-        // && bookQtyMgr.getBookQty(id) > 0;
-        // }) // check if books exists
-        // ) {
-        // if (!issuanceRepo.findBySid(sid).stream()
-        // .anyMatch(
-        // o -> bids.contains(o.get()) // check if some wanted book already
-        // // taken
-        // )) {
-        // bids.stream()
-        // .forEach(
-        // bid -> {
-        // issuanceRepo.save(new Issuance(sid, bid));
-        // bookQtyMgr.bookQtyDec(bid);
-        // } // TODO add bookqtymgr here
-        // );
-        // }
-        // }
-        // }
+        
 
         @Override
         public void issueBook(Long sid, Long bid) {
@@ -87,12 +62,7 @@ public class IssuanceServiceImpl implements IssuanceService {
                 });
 
 
-                // this.issuanceRepo.findAllSid().stream().forEach(e -> {
-                //         Student student = this.studentRepo.findById(e.get()).get();
-                //         Set<Book> books = this.issuanceRepo.findBySid(e.get()).stream()
-                //                         .map(x -> this.bookRepo.findById(x.get()).get()).collect(Collectors.toSet());
-                //         records.add(new IssuanceResponse(student, books,));
-                // });
+                
                 return records;
         }
 
