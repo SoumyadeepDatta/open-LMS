@@ -1,8 +1,8 @@
-package com.thinkxfactor.springdemo.APIs;
+package com.thinkxfactor.springdemo.controllers;
 
-import com.thinkxfactor.springdemo.libServices.IssuanceService;
-import com.thinkxfactor.springdemo.models.Book;
+import com.thinkxfactor.springdemo.entities.Book;
 import com.thinkxfactor.springdemo.services.BookService;
+import com.thinkxfactor.springdemo.services.IssuanceService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

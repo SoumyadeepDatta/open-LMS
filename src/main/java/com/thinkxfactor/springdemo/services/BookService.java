@@ -2,7 +2,7 @@ package com.thinkxfactor.springdemo.services;
 
 import java.util.Set;
 
-import com.thinkxfactor.springdemo.models.Book;
+import com.thinkxfactor.springdemo.entities.Book;
 
 public interface BookService {
 

@@ -1,8 +1,5 @@
-package com.thinkxfactor.springdemo.libAction;
+package com.thinkxfactor.springdemo.entities;
 
-
-import com.thinkxfactor.springdemo.models.Book;
-import com.thinkxfactor.springdemo.models.Student;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class IssuanceResponse {
+public class IssuanceDto {
     private Long id;
     private Student student;
     private Book book;

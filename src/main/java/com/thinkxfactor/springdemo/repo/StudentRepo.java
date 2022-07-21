@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.Student;
 
 public interface StudentRepo extends JpaRepository<Student, Long> {
 

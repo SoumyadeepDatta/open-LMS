@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.mgr;
+package com.thinkxfactor.springdemo.services;
 
 public interface BookQtyMgr {
 

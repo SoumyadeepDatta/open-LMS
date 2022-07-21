@@ -2,8 +2,8 @@ package com.thinkxfactor.springdemo.services;
 
 import java.util.Set;
 
-import com.thinkxfactor.springdemo.models.Admin;
-import com.thinkxfactor.springdemo.models.LoginDTO;
+import com.thinkxfactor.springdemo.entities.Admin;
+import com.thinkxfactor.springdemo.entities.LoginDto;
 
 public interface AdminService {
     
@@ -15,5 +15,5 @@ public interface AdminService {
 
     void delete(Long id);
 
-    Admin loginCheck(LoginDTO loginDTO);
+    Admin loginCheck(LoginDto loginDTO);
 }

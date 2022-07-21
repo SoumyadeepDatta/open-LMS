@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.thinkxfactor.springdemo.libAction.Issuance;
+import com.thinkxfactor.springdemo.entities.Issuance;
 
 public interface IssuanceRepo extends JpaRepository<Issuance, Long>{
 

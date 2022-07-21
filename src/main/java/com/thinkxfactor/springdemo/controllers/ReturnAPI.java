@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.issuanceAPIs;
+package com.thinkxfactor.springdemo.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.thinkxfactor.springdemo.libServices.IssuanceService;
-import com.thinkxfactor.springdemo.mgr.BookQtyMgr;
+import com.thinkxfactor.springdemo.services.BookQtyMgr;
+import com.thinkxfactor.springdemo.services.IssuanceService;
 
 @RestController
 @RequestMapping("/return")

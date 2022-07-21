@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.libServices.impls;
+package com.thinkxfactor.springdemo.services.impls;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -9,15 +9,15 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.thinkxfactor.springdemo.libAction.Issuance;
-import com.thinkxfactor.springdemo.libAction.IssuanceResponse;
-import com.thinkxfactor.springdemo.libServices.IssuanceService;
-import com.thinkxfactor.springdemo.mgr.BookQtyMgr;
-import com.thinkxfactor.springdemo.models.Book;
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.Book;
+import com.thinkxfactor.springdemo.entities.Issuance;
+import com.thinkxfactor.springdemo.entities.IssuanceDto;
+import com.thinkxfactor.springdemo.entities.Student;
 import com.thinkxfactor.springdemo.repo.BookRepo;
 import com.thinkxfactor.springdemo.repo.IssuanceRepo;
 import com.thinkxfactor.springdemo.repo.StudentRepo;
+import com.thinkxfactor.springdemo.services.BookQtyMgr;
+import com.thinkxfactor.springdemo.services.IssuanceService;
 
 @Service
 public class IssuanceServiceImpl implements IssuanceService {
@@ -49,16 +49,16 @@ public class IssuanceServiceImpl implements IssuanceService {
         }
 
         @Override
-        public Set<IssuanceResponse> getAllIssuanceDetails() {
+        public Set<IssuanceDto> getAllIssuanceDetails() {
 
 
 
-                Set<IssuanceResponse> records = new HashSet<>();
+                Set<IssuanceDto> records = new HashSet<>();
 
                 this.issuanceRepo.findAll().stream().forEach(e->{
                         Student student = this.studentRepo.findById(e.getSid()).get();
                         Book book = this.bookRepo.findById(e.getBid()).get();
-                        records.add(new IssuanceResponse(e.getId(), student, book, e.getDateTimeOfIssue(), e.getDateTimeOfApproval(), e.isApproved()));
+                        records.add(new IssuanceDto(e.getId(), student, book, e.getDateTimeOfIssue(), e.getDateTimeOfApproval(), e.isApproved()));
                 });
 
 
@@ -67,11 +67,11 @@ public class IssuanceServiceImpl implements IssuanceService {
         }
 
         @Override
-        public Set<IssuanceResponse> getIssuedBooks(Long sid) {
+        public Set<IssuanceDto> getIssuedBooks(Long sid) {
                 return this.issuanceRepo.findIssuanceBySid(sid).stream().map(o->{
                         Student student = this.studentRepo.findById(o.get().getSid()).get();
                         Book book = this.bookRepo.findById(o.get().getBid()).get();
-                        return new IssuanceResponse(o.get().getId(), student, book, o.get().getDateTimeOfIssue(), o.get().getDateTimeOfApproval(), o.get().isApproved());
+                        return new IssuanceDto(o.get().getId(), student, book, o.get().getDateTimeOfIssue(), o.get().getDateTimeOfApproval(), o.get().isApproved());
                 }).collect(Collectors.toSet());
         }
 

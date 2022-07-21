@@ -1,7 +1,7 @@
-package com.thinkxfactor.springdemo.APIs;
+package com.thinkxfactor.springdemo.controllers;
 
-import com.thinkxfactor.springdemo.models.LoginDTO;
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.LoginDto;
+import com.thinkxfactor.springdemo.entities.Student;
 import com.thinkxfactor.springdemo.services.StudentService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class StudentAPI {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<?> loginCheck(@RequestBody LoginDTO loginDTO) {
+    public ResponseEntity<?> loginCheck(@RequestBody LoginDto loginDTO) {
         return (this.studentService.loginCheck(loginDTO)==null)? 
             ResponseEntity.status(HttpStatus.NOT_FOUND).build():
             ResponseEntity.ok(this.studentService.loginCheck(loginDTO));

@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.libAction;
+package com.thinkxfactor.springdemo.entities;
 
 
 import java.text.SimpleDateFormat;

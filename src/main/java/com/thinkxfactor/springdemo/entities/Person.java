@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.models;
+package com.thinkxfactor.springdemo.entities;
 
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;

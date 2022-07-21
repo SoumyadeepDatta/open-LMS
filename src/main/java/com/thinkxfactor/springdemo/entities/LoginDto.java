@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.models;
+package com.thinkxfactor.springdemo.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class LoginDTO {
+public class LoginDto {
     private String username;
     private String password;
 }

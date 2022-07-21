@@ -1,10 +1,10 @@
-package com.thinkxfactor.springdemo.mgr.impls;
+package com.thinkxfactor.springdemo.services.impls;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.thinkxfactor.springdemo.mgr.BookQtyMgr;
 import com.thinkxfactor.springdemo.repo.BookRepo;
+import com.thinkxfactor.springdemo.services.BookQtyMgr;
 
 @Service
 public class BookQtyMgrImpl implements BookQtyMgr{

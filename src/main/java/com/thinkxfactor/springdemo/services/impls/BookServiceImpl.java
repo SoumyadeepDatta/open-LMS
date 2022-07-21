@@ -6,7 +6,7 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.thinkxfactor.springdemo.models.Book;
+import com.thinkxfactor.springdemo.entities.Book;
 import com.thinkxfactor.springdemo.repo.BookRepo;
 import com.thinkxfactor.springdemo.services.BookService;
 

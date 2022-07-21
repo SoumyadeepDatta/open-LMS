@@ -1,18 +1,18 @@
-package com.thinkxfactor.springdemo.libServices;
+package com.thinkxfactor.springdemo.services;
 
 import java.util.Set;
 
-import com.thinkxfactor.springdemo.libAction.Issuance;
-import com.thinkxfactor.springdemo.libAction.IssuanceResponse;
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.Issuance;
+import com.thinkxfactor.springdemo.entities.IssuanceDto;
+import com.thinkxfactor.springdemo.entities.Student;
 
 public interface IssuanceService {
     
     void issueBook(Long sid, Long bid);
 
-    Set<IssuanceResponse> getAllIssuanceDetails();
+    Set<IssuanceDto> getAllIssuanceDetails();
 
-    Set<IssuanceResponse> getIssuedBooks(Long sid);
+    Set<IssuanceDto> getIssuedBooks(Long sid);
 
     Set<Student> getStudentsWhoIssued(Long bid);
 

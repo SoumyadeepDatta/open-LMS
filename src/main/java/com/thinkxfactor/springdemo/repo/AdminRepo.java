@@ -4,7 +4,7 @@ import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.thinkxfactor.springdemo.models.Admin;
+import com.thinkxfactor.springdemo.entities.Admin;
 
 public interface AdminRepo extends JpaRepository<Admin,Long>{
     

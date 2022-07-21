@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.models;
+package com.thinkxfactor.springdemo.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -12,7 +12,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Table
-public class Admin extends Person{
+public class Student extends Person{
 
-    private String role;
+    private Integer sem;
+
+    
+
+    
 }

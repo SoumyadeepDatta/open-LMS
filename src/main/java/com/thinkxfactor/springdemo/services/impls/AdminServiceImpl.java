@@ -7,8 +7,8 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.thinkxfactor.springdemo.models.Admin;
-import com.thinkxfactor.springdemo.models.LoginDTO;
+import com.thinkxfactor.springdemo.entities.Admin;
+import com.thinkxfactor.springdemo.entities.LoginDto;
 import com.thinkxfactor.springdemo.repo.AdminRepo;
 import com.thinkxfactor.springdemo.services.AdminService;
 
@@ -44,7 +44,7 @@ public class AdminServiceImpl implements AdminService{
     }
 
     @Override
-    public Admin loginCheck(LoginDTO loginDTO) {
+    public Admin loginCheck(LoginDto loginDTO) {
         Optional<Admin> admin = this.adminRepo.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
         return (admin.isPresent())? admin.get():null; 
     }

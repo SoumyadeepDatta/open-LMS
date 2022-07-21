@@ -7,8 +7,8 @@ import java.util.Set;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.thinkxfactor.springdemo.models.LoginDTO;
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.LoginDto;
+import com.thinkxfactor.springdemo.entities.Student;
 import com.thinkxfactor.springdemo.repo.StudentRepo;
 import com.thinkxfactor.springdemo.services.StudentService;
 
@@ -43,7 +43,7 @@ public class StudentServiceImpl implements StudentService{
     }
 
     @Override
-    public Student loginCheck(LoginDTO loginDTO) {
+    public Student loginCheck(LoginDto loginDTO) {
         Optional<Student> student = this.studentRepo.findByUsernameAndPassword(loginDTO.getUsername(), loginDTO.getPassword());
         return (student.isPresent())? student.get():null; 
     }

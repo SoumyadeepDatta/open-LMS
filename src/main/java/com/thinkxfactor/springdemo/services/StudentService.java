@@ -2,8 +2,8 @@ package com.thinkxfactor.springdemo.services;
 
 import java.util.Set;
 
-import com.thinkxfactor.springdemo.models.LoginDTO;
-import com.thinkxfactor.springdemo.models.Student;
+import com.thinkxfactor.springdemo.entities.LoginDto;
+import com.thinkxfactor.springdemo.entities.Student;
 
 
 public interface StudentService {
@@ -16,5 +16,5 @@ public interface StudentService {
 
     void delete(Long id);
 
-    Student loginCheck(LoginDTO loginDTO);
+    Student loginCheck(LoginDto loginDTO);
 }
