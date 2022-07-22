@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/book")
 @CrossOrigin()
-public class BookAPI {
+public class BookController {
 
     @Autowired
     private BookService bookService;

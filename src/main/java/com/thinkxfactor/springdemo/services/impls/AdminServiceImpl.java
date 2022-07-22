@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 
 import com.thinkxfactor.springdemo.entities.Admin;
 import com.thinkxfactor.springdemo.entities.LoginDto;
-import com.thinkxfactor.springdemo.repo.AdminRepo;
+import com.thinkxfactor.springdemo.repository.AdminRepository;
 import com.thinkxfactor.springdemo.services.AdminService;
 
 @Service
 public class AdminServiceImpl implements AdminService{
 
     @Autowired
-    AdminRepo adminRepo;
+    AdminRepository adminRepo;
 
     @Override
     public Admin save(Admin admin) {

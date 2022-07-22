@@ -7,14 +7,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.thinkxfactor.springdemo.entities.Book;
-import com.thinkxfactor.springdemo.repo.BookRepo;
+import com.thinkxfactor.springdemo.repository.BookRepository;
 import com.thinkxfactor.springdemo.services.BookService;
 
 @Service
 public class BookServiceImpl implements BookService{
 
     @Autowired
-    BookRepo bookRepo;
+    BookRepository bookRepo;
     
     @Override
     public Book save(Book book) {

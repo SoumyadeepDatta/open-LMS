@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.repo;
+package com.thinkxfactor.springdemo.repository;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkxfactor.springdemo.entities.Issuance;
 
-public interface IssuanceRepo extends JpaRepository<Issuance, Long>{
+public interface IssuanceRepository extends JpaRepository<Issuance, Long>{
 
     Optional<Issuance> findBySidAndBid(Long sid,Long bid);
     

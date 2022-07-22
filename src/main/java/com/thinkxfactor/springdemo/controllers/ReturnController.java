@@ -14,7 +14,7 @@ import com.thinkxfactor.springdemo.services.IssuanceService;
 @RestController
 @RequestMapping("/return")
 @CrossOrigin
-public class ReturnAPI {
+public class ReturnController {
     
     @Autowired
     IssuanceService issuanceService;

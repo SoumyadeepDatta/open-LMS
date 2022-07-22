@@ -1,4 +1,4 @@
-package com.thinkxfactor.springdemo.repo;
+package com.thinkxfactor.springdemo.repository;
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.thinkxfactor.springdemo.entities.Book;
 
-public interface BookRepo extends JpaRepository<Book,Long>{
+public interface BookRepository extends JpaRepository<Book,Long>{
     
     @Modifying
     @Transactional

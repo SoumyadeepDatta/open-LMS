@@ -13,9 +13,9 @@ import com.thinkxfactor.springdemo.entities.Book;
 import com.thinkxfactor.springdemo.entities.Issuance;
 import com.thinkxfactor.springdemo.entities.IssuanceDto;
 import com.thinkxfactor.springdemo.entities.Student;
-import com.thinkxfactor.springdemo.repo.BookRepo;
-import com.thinkxfactor.springdemo.repo.IssuanceRepo;
-import com.thinkxfactor.springdemo.repo.StudentRepo;
+import com.thinkxfactor.springdemo.repository.BookRepository;
+import com.thinkxfactor.springdemo.repository.IssuanceRepository;
+import com.thinkxfactor.springdemo.repository.StudentRepository;
 import com.thinkxfactor.springdemo.services.BookQtyMgr;
 import com.thinkxfactor.springdemo.services.IssuanceService;
 
@@ -23,13 +23,13 @@ import com.thinkxfactor.springdemo.services.IssuanceService;
 public class IssuanceServiceImpl implements IssuanceService {
 
         @Autowired
-        private StudentRepo studentRepo;
+        private StudentRepository studentRepo;
 
         @Autowired
-        private BookRepo bookRepo;
+        private BookRepository bookRepo;
 
         @Autowired
-        private IssuanceRepo issuanceRepo;
+        private IssuanceRepository issuanceRepo;
 
         @Autowired
         private BookQtyMgr bookQtyMgr;

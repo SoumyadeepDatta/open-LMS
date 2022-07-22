@@ -19,7 +19,7 @@ import com.thinkxfactor.springdemo.services.IssuanceService;
 @RestController
 @RequestMapping("/issuance")
 @CrossOrigin
-public class IssueAPI {
+public class IssueController {
 
     @Autowired
     IssuanceService issuanceService;

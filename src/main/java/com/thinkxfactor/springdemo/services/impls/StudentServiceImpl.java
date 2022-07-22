@@ -9,14 +9,14 @@ import org.springframework.stereotype.Service;
 
 import com.thinkxfactor.springdemo.entities.LoginDto;
 import com.thinkxfactor.springdemo.entities.Student;
-import com.thinkxfactor.springdemo.repo.StudentRepo;
+import com.thinkxfactor.springdemo.repository.StudentRepository;
 import com.thinkxfactor.springdemo.services.StudentService;
 
 @Service
 public class StudentServiceImpl implements StudentService{
 
     @Autowired
-    StudentRepo studentRepo;
+    StudentRepository studentRepo;
 
     @Override
     public Student save(Student student) {
